@@ -1,0 +1,38 @@
+<h1>Login Page</h1>
+<div class="container mt-3">
+    <h2 [ngStyle]="{'font-weight': 2 + 2 === 4 ? 'bold'   : 'normal'}">Login Form</h2>
+    <form>
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="mb-3">
+          <label for="pwd" class="form-label">Password:</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+        </div>
+        <div class="form-check mb-3">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember"> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+<h3 ngClass="customStyle">Click on any animal button</h3>
+<div class="btnDesign" >
+    <button class="btn btn-sm btn-primary" (click)="assignComponent('cow')" >Cow</button>
+    <button class="btn btn-sm btn-primary" (click)="assignComponent('cat')" >Cat</button>
+    <button class="btn btn-sm btn-primary" (click)="assignComponent('dog')" >Dog</button>
+</div>
+
+<div>
+    <ng-container *ngComponentOutlet="dummyComponent"></ng-container>
+</div>
+
+<!-- <form > -->
+    <input type="text" name="username" [(ngModel)]="username">
+<!-- </form> -->
+<br>
+{{username}}
+<!-- <div #placeholder (click)="doSomething()">Click me</div> -->

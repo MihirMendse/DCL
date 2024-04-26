@@ -1,0 +1,10 @@
+.btnDesign{
+    
+    display: flex;
+    gap: 10px;
+}
+
+.customStyle{
+    color: rgb(8, 0, 255);
+    font-weight: bold;
+}
